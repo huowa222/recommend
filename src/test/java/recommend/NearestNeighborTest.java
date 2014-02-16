@@ -2,12 +2,17 @@ package recommend;
 
 import ch.lambdaj.Lambda;
 import org.junit.Test;
+import recommend.distance.CosineDistanceFunction;
+import recommend.distance.DiscreteDistanceFunction;
+import recommend.distance.DistanceFunction;
+import recommend.distance.EuclideanDistanceFunction;
+import recommend.distance.JaccardDistanceFunction;
+import recommend.distance.PearsonDistanceFunction;
 import recommend.feature.FeatureVector;
 import recommend.feature.impl.HeightFeature;
 import recommend.feature.impl.WaistFeature;
 import recommend.feature.impl.WeightFeature;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -15,7 +20,7 @@ import java.util.Random;
 /**
  * Created by kenny on 2/13/14.
  */
-public class IntersectedDistanceTest {
+public class NearestNeighborTest {
 
     private static final FeatureVector KENNY = buildKenny();
 
@@ -24,27 +29,25 @@ public class IntersectedDistanceTest {
     @Test
     public void euclideanDistance() {
         System.out.println("Euclidean Distance Test");
-        double score = IntersectedDistance.euclidean(KENNY, PERSON);
+        double score = new EuclideanDistanceFunction().distance(KENNY, PERSON);
         System.out.println(KENNY);
         System.out.println(PERSON);
-        System.out.println(DistanceFunctionTypes.EUCLIDEAN + ": " + score);
+        System.out.println(score);
 
-        score = IntersectedDistance.euclidean(KENNY, KENNY);
-        System.out.println("kenny vs kenny");
-        System.out.println(DistanceFunctionTypes.EUCLIDEAN + ": " + score);
+        score = new EuclideanDistanceFunction().distance(KENNY, KENNY);
+        System.out.println("kenny vs kenny: " + score);
     }
 
     @Test
     public void pearsonsCoefficient() {
         System.out.println("Pearson Coefficient Test");
-        double score = IntersectedDistance.pearsonCoefficient(KENNY, PERSON);
+        double score = new PearsonDistanceFunction().distance(KENNY, PERSON);
         System.out.println(KENNY);
         System.out.println(PERSON);
-        System.out.println(DistanceFunctionTypes.PEARSON + ": " + score);
+        System.out.println(score);
 
-        score = IntersectedDistance.pearsonCoefficient(KENNY, KENNY);
-        System.out.println("kenny vs kenny");
-        System.out.println(DistanceFunctionTypes.PEARSON + ": " + score);
+        score = new PearsonDistanceFunction().distance(KENNY, KENNY);
+        System.out.println("kenny vs kenny: " + score);
     }
 
     @Test
@@ -53,18 +56,22 @@ public class IntersectedDistanceTest {
 
         List<FeatureVector> people = buildRandomPeople(100000);
 
-        massScoreTest(kenny, people, DistanceFunctionTypes.DISCRETE);
-        massScoreTest(kenny, people, DistanceFunctionTypes.EUCLIDEAN);
-        massScoreTest(kenny, people, DistanceFunctionTypes.COSINE);
-        massScoreTest(kenny, people, DistanceFunctionTypes.PEARSON);
-        massScoreTest(kenny, people, DistanceFunctionTypes.JACCARD, 0.3);
+        massScoreTest(kenny, people, new DiscreteDistanceFunction(), 10);
+        massScoreTest(kenny, people, new EuclideanDistanceFunction(), 10);
+        massScoreTest(kenny, people, new CosineDistanceFunction(), 10);
+        massScoreTest(kenny, people, new PearsonDistanceFunction(), 10);
+        massScoreTest(kenny, people, new JaccardDistanceFunction(0.3), 10);
     }
 
-    private void massScoreTest(FeatureVector person, List<FeatureVector> people, DistanceFunctionTypes distanceFunction, double ... params) {
-        List<FeatureVector> sortedPeople = IntersectedDistance.score(person, people, 5, distanceFunction, params);
-        System.out.println("Top 5 for: " + person);
-        System.out.println("Using: " + distanceFunction + ", params: " + Arrays.toString(params));
+    private void massScoreTest(FeatureVector person, List<FeatureVector> people, DistanceFunction distanceFunction, int n) {
+        NearestNeighbor nearestNeighbor = new NearestNeighbor(people);
+        nearestNeighbor.setDistanceFunction(distanceFunction);
+
+        List<FeatureVector> sortedPeople = nearestNeighbor.search(person, n);
+        System.out.println("Top " + n + " for: " + person);
+        System.out.println("Using: " + distanceFunction);
         System.out.println(Lambda.join(sortedPeople, "\n"));
+        System.out.println("\n");
     }
 
     private static FeatureVector buildKenny() {

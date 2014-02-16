@@ -1,24 +1,26 @@
 package recommend.feature.impl;
 
 import recommend.feature.Feature;
-import recommend.math.Transform;
+import recommend.math.Normalize;
 
 /**
  * Created by kenny on 2/13/14.
  */
 public class WeightFeature extends Feature {
 
-    private static final double MAX_VALUE = 400;
+    private static final double MAX_WEIGHT = 450;
 
-    private static final double MIN_VALUE = 80;
+    private static final double AVG_WEIGHT = 177.9;
+
+    private static final double STAND_DEV = 7.5; // random number
 
     public WeightFeature(double value) {
         super("WEIGHT", value);
     }
 
     @Override
-    public double normalize(double value) {
-        return Transform.normalize(value, MIN_VALUE, MAX_VALUE);
+    public double normalize() {
+        return Normalize.poisson(getOriginalValue(), 0.01);
     }
 
     @Override

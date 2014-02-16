@@ -1,7 +1,7 @@
 package recommend.feature.impl;
 
 import recommend.feature.Feature;
-import recommend.math.Transform;
+import recommend.math.Normalize;
 
 /**
  * Created by kenny on 2/13/14.
@@ -17,8 +17,8 @@ public class WaistFeature extends Feature {
     }
 
     @Override
-    public double normalize(double value) {
-        return Transform.normalize(value, MIN_VALUE, MAX_VALUE);
+    public double normalize() {
+        return Normalize.linear(getOriginalValue(), MIN_VALUE, MAX_VALUE);
     }
 
     @Override

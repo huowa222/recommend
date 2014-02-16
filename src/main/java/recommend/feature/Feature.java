@@ -3,7 +3,7 @@ package recommend.feature;
 /**
  * Created by kenny on 2/13/14.
  */
-public abstract class Feature {
+public abstract class Feature implements Normalizable {
 
     private final String name;
 
@@ -14,10 +14,8 @@ public abstract class Feature {
     public Feature(String name, double value) {
         this.name = name;
         this.originalValue = value;
-        this.value = normalize(value);
+        this.value = normalize();
     }
-
-    public abstract double normalize(double value);
 
     public String getName() {
         return name;
