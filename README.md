@@ -3,6 +3,8 @@ recommend
 
 Recommendation Engine for Category-Model and Item-Model recommendation
 
+Algorithms from the book [Collective Intelligence](http://shop.oreilly.com/product/9780596529321.do)
+
 **Definitions:**
 
 - A Category is a top level construct that may contain a set of Items
