@@ -1,6 +1,7 @@
 package recommend.distance;
 
-import recommend.feature.FeatureVector;
+import recommend.feature.Category;
+import recommend.feature.Item;
 
 import java.util.Set;
 
@@ -26,16 +27,16 @@ public class JaccardDistanceFunction implements DistanceFunction {
      * dJ = (M01 + M10) / (M01 + M10 + M11)
      */
     @Override
-    public double distance(FeatureVector featureVector1, FeatureVector featureVector2) {
-        Set<String> intersection = featureVector1.intersection(featureVector2);
+    public double distance(Item item1, Item item2) {
+        Set<String> intersection = item1.intersection(item2);
 
         double m11 = 0;
         double m01 = 0;
         double m10 = 0;
         double m00 = 0; // unused
         for(String feature : intersection) {
-            boolean a = featureVector1.get(feature) >= positiveThreshold ? true : false;
-            boolean b = featureVector2.get(feature) >= positiveThreshold ? true : false;
+            boolean a = item1.getFeature(feature).getValue() >= positiveThreshold ? true : false;
+            boolean b = item2.getFeature(feature).getValue() >= positiveThreshold ? true : false;
             if(a & b) {
                 m11++;
             } else if(!a & b) {
@@ -50,6 +51,12 @@ public class JaccardDistanceFunction implements DistanceFunction {
             return 0;
         }
         return (m01 + m10) / (m01 + m10 + m11);
+    }
+
+    @Override
+    public double distance(Category category1, Category category2) {
+        System.out.println("Not Implemented");
+        return 0.0;
     }
 
     @Override

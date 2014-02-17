@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4d540ee-990d-4327-be76-a617547999ae" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/recommend/DistanceFunctionTypes.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/recommend/IntersectedDistance.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/recommend/math/Transform.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/math/Normalize.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/recommend/IntersectedDistanceTest.java" afterPath="$PROJECT_DIR$/src/test/java/recommend/NearestNeighborTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/recommend/ItemNearestNeighborTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/recommend/NearestNeighbor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/recommend/distance/PearsonDistanceFunction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/recommend/NearestNeighborTest.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/FeatureVector.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/Item.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/HeightFeature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/HeightFeature.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WaistFeature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/WaistFeature.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WeightFeature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/WeightFeature.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/distance/DistanceFunction.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/distance/DistanceFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/Feature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/Feature.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/HeightFeature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/HeightFeature.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WaistFeature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WaistFeature.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WeightFeature.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WeightFeature.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/recommend/distance/JaccardDistanceFunction.java" afterPath="$PROJECT_DIR$/src/main/java/recommend/distance/JaccardDistanceFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/recommend/feature/WeightFeatureTest.java" afterPath="$PROJECT_DIR$/src/test/java/recommend/feature/WeightFeatureTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recommend.iws" />
@@ -79,110 +86,141 @@
     <favorites_list name="recommend" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="NearestNeighbor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/recommend/NearestNeighbor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="47" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="750">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1259#1260#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiscreteDistanceFunction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="40" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Normalize.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/recommend/math/Normalize.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="49" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NormalizeTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/recommend/math/NormalizeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="840">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NearestNeighborTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/recommend/NearestNeighborTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="33" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1725">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WaistFeature.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/WaistFeature.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeightFeature.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/HeightFeature.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="1" selection-start="235" selection-end="283" vertical-scroll-proportion="0.09090909" vertical-offset="114" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeightFeatureTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/recommend/feature/WeightFeatureTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="40" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeightFeature.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/WeightFeature.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="59" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="585">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.73741007">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="ItemNearestNeighborTest.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/recommend/ItemNearestNeighborTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="46" column="27" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1485">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ItemNearestNeighbor.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/ItemNearestNeighbor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="38" column="52" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="675">
+                  <folding>
+                    <element signature="e#992#993#0" expanded="true" />
+                    <element signature="e#1048#1049#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CategoryNearestNeighbor.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/CategoryNearestNeighbor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="28" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+                  <folding>
+                    <element signature="e#1032#1033#0" expanded="true" />
+                    <element signature="e#1088#1089#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Item.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Item.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="82" column="37" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1725">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Category.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Category.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="63" column="37" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.40650406" vertical-offset="795" max-vertical-offset="1515">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#479#480#0" expanded="true" />
+                    <element signature="e#506#507#0" expanded="true" />
+                    <element signature="e#538#539#0" expanded="true" />
+                    <element signature="e#566#567#0" expanded="true" />
+                    <element signature="e#608#609#0" expanded="true" />
+                    <element signature="e#642#643#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Measurable.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Measurable.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CategoryNearestNeighborTest.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/recommend/CategoryNearestNeighborTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="15" column="73" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1050">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PearsonsCoefficientFunction.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/PearsonsCoefficientFunction.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="62" column="18" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="1110">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EuclideanDistanceFunction.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="49" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="615">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CosineDistanceFunction.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="46" column="0" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="825">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="SampleCorpus.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/recommend/SampleCorpus.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="67" column="0" selection-start="3367" selection-end="3652" vertical-scroll-proportion="0.84960425" vertical-offset="683" max-vertical-offset="1245">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -195,19 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/vector/Feature.java" />
-        <option value="$PROJECT_DIR$/src/main/java/NeighborJoining.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vector/Features.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Collection.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/vector/FeatureSet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Similarity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DistanceFunctionEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/feature/FeatureSet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/FeatureNames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/names/SizeFeatureNames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/names/SizeFeatures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/FeatureSet.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/feature/types/SizeFeatures.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/feature/types/WeightFeature.java" />
@@ -222,22 +247,43 @@
         <option value="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WaistFeature.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Normalizable.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/distance/Distance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Measurable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/DistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Feature.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/feature/impl/HeightFeature.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/distance/BooleanDistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/JaccardDistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/PearsonDistanceFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/recommend/NearestNeighbor.java" />
         <option value="$PROJECT_DIR$/src/test/java/recommend/math/NormalizeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/math/Normalize.java" />
         <option value="$PROJECT_DIR$/src/test/java/recommend/feature/WeightFeatureTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/recommend/feature/impl/WeightFeature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/Rating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/impl/Rating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Feature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/impl/RatingFeature.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/distance/PearsonsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/PearsonsCoefficient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/PearsonDistanceFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/SimilarityFunction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/similar/PearsonsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/PearsonsCoefficientFunction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/GameRecommendTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/SampleCorpus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/similar/PearsonsCoefficientFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/DistanceFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/JaccardDistanceFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/MovieRecommendTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/CategoryRecommender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Measureable.java" />
         <option value="$PROJECT_DIR$/src/test/java/recommend/NearestNeighborTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/NearestNeighbor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Measurable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/ItemNearestNeighbor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/CategoryNearestNeighbor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/ItemNearestNeighborTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/distance/PearsonsCoefficientFunction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/recommend/CategoryNearestNeighborTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/recommend/feature/Category.java" />
       </list>
     </option>
   </component>
@@ -249,7 +295,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="830" />
@@ -514,40 +559,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="feature" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recommend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recommend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recommend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="distance" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -579,99 +590,24 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="recommend" />
       <recent name="recommend.distance" />
       <recent name="recommend.feature.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="recommend.feature" />
+      <recent name="recommend" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="recommend.distance" />
+      <recent name="recommend.similar" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.NearestNeighborTest">
-    <configuration default="false" name="NormalizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="recommend.math.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="recommend" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="recommend.math" />
-      <option name="MAIN_CLASS_NAME" value="recommend.math.NormalizeTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="NormalizeTest.log" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="recommend.math.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="recommend" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="recommend.math" />
-      <option name="MAIN_CLASS_NAME" value="recommend.math.NormalizeTest" />
-      <option name="METHOD_NAME" value="log" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="NormalizeTest.poisson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="recommend.math.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="recommend" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="recommend.math" />
-      <option name="MAIN_CLASS_NAME" value="recommend.math.NormalizeTest" />
-      <option name="METHOD_NAME" value="poisson" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="NearestNeighborTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="false" name="ItemNearestNeighborTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="recommend.*" />
@@ -682,7 +618,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="recommend" />
-      <option name="MAIN_CLASS_NAME" value="recommend.NearestNeighborTest" />
+      <option name="MAIN_CLASS_NAME" value="recommend.ItemNearestNeighborTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -699,20 +635,104 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="WeightFeatureTest.normalizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CategoryNearestNeighborTest.recommendMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="recommend.feature.*" />
+          <option name="PATTERN" value="recommend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="recommend" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="recommend.feature" />
-      <option name="MAIN_CLASS_NAME" value="recommend.feature.WeightFeatureTest" />
-      <option name="METHOD_NAME" value="normalizeTest" />
+      <option name="PACKAGE_NAME" value="recommend" />
+      <option name="MAIN_CLASS_NAME" value="recommend.CategoryNearestNeighborTest" />
+      <option name="METHOD_NAME" value="recommendMovie" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PearsonsTest.generalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="recommend.distance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="recommend" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="recommend.similar" />
+      <option name="MAIN_CLASS_NAME" value="recommend.similar.PearsonsTest" />
+      <option name="METHOD_NAME" value="generalTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ItemNearestNeighborTest.massScoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="recommend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="recommend" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="recommend" />
+      <option name="MAIN_CLASS_NAME" value="recommend.ItemNearestNeighborTest" />
+      <option name="METHOD_NAME" value="massScoreTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CategoryNearestNeighborTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="recommend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="recommend" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="recommend" />
+      <option name="MAIN_CLASS_NAME" value="recommend.CategoryNearestNeighborTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -795,19 +815,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.NormalizeTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.NormalizeTest.log" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.NormalizeTest.poisson" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NearestNeighborTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.WeightFeatureTest.normalizeTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ItemNearestNeighborTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CategoryNearestNeighborTest.recommendMovie" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PearsonsTest.generalTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ItemNearestNeighborTest.massScoreTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CategoryNearestNeighborTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.NearestNeighborTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WeightFeatureTest.normalizeTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NormalizeTest.poisson" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NormalizeTest.log" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.NormalizeTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CategoryNearestNeighborTest.recommendMovie" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CategoryNearestNeighborTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ItemNearestNeighborTest.massScoreTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PearsonsTest.generalTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ItemNearestNeighborTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -825,14 +845,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="22" width="1440" height="830" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -843,8 +863,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23962805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39430895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2653791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43089432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -852,6 +872,31 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2653791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29539296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -884,7 +929,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/FeatureVector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="40" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1035">
           <folding>
@@ -921,52 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/FeatureVector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="245" selection-end="245" vertical-scroll-proportion="0.15574963" vertical-offset="88" max-vertical-offset="1380">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/DistanceFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="78" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="38" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="41" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/JaccardDistanceFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1763" selection-end="1937" vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/PearsonDistanceFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="39" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Normalizable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="46" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
@@ -988,59 +987,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="40" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/NearestNeighbor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="47" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="750">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/math/Normalize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/recommend/feature/WeightFeatureTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="40" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+        <state line="4" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Feature.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/WeightFeature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/WeightFeature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="59" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="585">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/recommend/math/NormalizeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="840">
+        <state line="22" column="59" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="585">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1054,26 +1012,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/recommend/NearestNeighborTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/HeightFeature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="33" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1725">
+        <state line="8" column="13" selection-start="161" selection-end="161" vertical-scroll-proportion="0.2651515" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/person/WaistFeature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="193" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="442" column="18" selection-start="17804" selection-end="17804" vertical-scroll-proportion="0.5984849" vertical-offset="6018" max-vertical-offset="8430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/recommend/math/NormalizeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="27" selection-start="746" selection-end="746" vertical-scroll-proportion="0.7252252" vertical-offset="113" max-vertical-offset="840">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/src.zip!/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="18" selection-start="971" selection-end="971" vertical-scroll-proportion="0.8518519" vertical-offset="129" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/math/Normalize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="25" selection-start="144" selection-end="144" vertical-scroll-proportion="0.3139535" vertical-offset="0" max-vertical-offset="430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/RatingFeature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="320" column="39" selection-start="11064" selection-end="11064" vertical-scroll-proportion="0.0" vertical-offset="4226" max-vertical-offset="17595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/DistanceFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/WaistFeature.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/JaccardDistanceFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="55" column="0" selection-start="1753" selection-end="1908" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/impl/HeightFeature.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/DiscreteDistanceFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="235" selection-end="283" vertical-scroll-proportion="0.09090909" vertical-offset="114" max-vertical-offset="540">
+        <state line="10" column="48" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="630">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/EuclideanDistanceFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="49" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="615">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Feature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Measurable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/CategoryNearestNeighbor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding>
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/CosineDistanceFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/ItemNearestNeighbor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="52" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="675">
+          <folding>
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/recommend/ItemNearestNeighborTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="27" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1485">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/distance/PearsonsCoefficientFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="18" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0" vertical-offset="773" max-vertical-offset="1110">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/recommend/SampleCorpus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="3367" selection-end="3652" vertical-scroll-proportion="0.84960425" vertical-offset="683" max-vertical-offset="1245">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/recommend/CategoryNearestNeighborTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="73" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1050">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="37" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1725">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/recommend/feature/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="37" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.40650406" vertical-offset="795" max-vertical-offset="1515">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

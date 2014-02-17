@@ -1,6 +1,7 @@
 package recommend.distance;
 
-import recommend.feature.FeatureVector;
+import recommend.feature.Category;
+import recommend.feature.Item;
 
 import java.util.Set;
 
@@ -10,17 +11,23 @@ import java.util.Set;
 public class DiscreteDistanceFunction implements DistanceFunction {
 
     @Override
-    public double distance(FeatureVector featureVector1, FeatureVector featureVector2) {
-        Set<String> intersection = featureVector1.intersection(featureVector2);
+    public double distance(Item item1, Item item2) {
+        Set<String> intersection = item1.intersection(item2);
         if(intersection.size() == 0) {
             return 0.0;
         }
 
         for(String feature : intersection) {
-            if(featureVector1.get(feature) != featureVector2.get(feature)) {
+            if(item1.getFeature(feature) != item2.getFeature(feature)) {
                 return 1.0;
             }
         }
+        return 0.0;
+    }
+
+    @Override
+    public double distance(Category category1, Category category2) {
+        System.out.println("Not Implemented");
         return 0.0;
     }
 

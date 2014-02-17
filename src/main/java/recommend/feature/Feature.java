@@ -22,7 +22,7 @@ public abstract class Feature implements Normalizable {
     }
 
     /**
-     * get normalized value
+     * getItem normalized value
      */
     public double getValue() {
         return value;
@@ -30,19 +30,6 @@ public abstract class Feature implements Normalizable {
 
     public double getOriginalValue() {
         return originalValue;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Feature)) return false;
-
-        Feature feature = (Feature) o;
-
-        if (Double.compare(feature.value, value) != 0) return false;
-        if (!name.equals(feature.name)) return false;
-
-        return true;
     }
 
     @Override

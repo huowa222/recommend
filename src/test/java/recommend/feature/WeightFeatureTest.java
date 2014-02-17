@@ -1,7 +1,7 @@
 package recommend.feature;
 
 import org.junit.Test;
-import recommend.feature.impl.WeightFeature;
+import recommend.feature.impl.person.WeightFeature;
 
 /**
  * Created by kenny on 2/16/14.

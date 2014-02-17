@@ -1,6 +1,7 @@
 package recommend.distance;
 
-import recommend.feature.FeatureVector;
+import recommend.feature.Category;
+import recommend.feature.Item;
 import recommend.math.Normalize;
 
 import java.util.Set;
@@ -11,23 +12,23 @@ import java.util.Set;
 public class CosineDistanceFunction implements DistanceFunction {
 
     @Override
-    public double distance(FeatureVector featureVector1, FeatureVector featureVector2) {
-        Set<String> intersection = featureVector1.intersection(featureVector2);
+    public double distance(Item item1, Item item2) {
+        Set<String> intersection = item1.intersection(item2);
 
         double sumProd = 0;
         for(String feature : intersection) {
-            sumProd += featureVector1.get(feature) * featureVector2.get(feature);
+            sumProd += item1.getFeature(feature).getValue() * item2.getFeature(feature).getValue();
         }
 
         double sum1sq = 0;
         for(String feature : intersection) {
-            sum1sq += featureVector1.get(feature) * featureVector1.get(feature);
+            sum1sq += item1.getFeature(feature).getValue() * item1.getFeature(feature).getValue();
         }
         sum1sq = Math.sqrt(sum1sq);
 
         double sum2sq = 0;
         for(String feature : intersection) {
-            sum2sq += featureVector2.get(feature) * featureVector2.get(feature);
+            sum2sq += item2.getFeature(feature).getValue() * item2.getFeature(feature).getValue();
         }
         sum2sq = Math.sqrt(sum2sq);
 
@@ -36,6 +37,12 @@ public class CosineDistanceFunction implements DistanceFunction {
         }
         double cosineSimilarity = sumProd / (sum1sq * sum2sq); // -1 opposite, 0 indifferent, 1 exactly the same
         return 1 - Normalize.linear(cosineSimilarity, -1, 1); // scale to 0 same 1 opposites
+    }
+
+    @Override
+    public double distance(Category category1, Category category2) {
+        System.out.println("Not Implemented");
+        return 0.0;
     }
 
     @Override

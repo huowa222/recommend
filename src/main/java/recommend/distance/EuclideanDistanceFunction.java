@@ -1,6 +1,7 @@
 package recommend.distance;
 
-import recommend.feature.FeatureVector;
+import recommend.feature.Category;
+import recommend.feature.Item;
 
 import java.util.Set;
 
@@ -10,14 +11,20 @@ import java.util.Set;
 public class EuclideanDistanceFunction implements DistanceFunction {
 
     @Override
-    public double distance(FeatureVector featureVector1, FeatureVector featureVector2) {
-        Set<String> intersection = featureVector1.intersection(featureVector2);
+    public double distance(Item item1, Item item2) {
+        Set<String> intersection = item1.intersection(item2);
 
         double sumSq = 0;
         for(String feature : intersection) {
-            sumSq += Math.pow(featureVector1.get(feature) - featureVector2.get(feature), 2);
+            sumSq += Math.pow(item1.getFeature(feature).getValue() - item2.getFeature(feature).getValue(), 2);
         }
         return Math.sqrt(sumSq);
+    }
+
+    @Override
+    public double distance(Category category1, Category category2) {
+        System.out.println("Not Implemented");
+        return 0.0;
     }
 
     @Override

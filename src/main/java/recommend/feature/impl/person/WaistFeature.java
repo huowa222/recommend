@@ -1,4 +1,4 @@
-package recommend.feature.impl;
+package recommend.feature.impl.person;
 
 import recommend.feature.Feature;
 import recommend.math.Normalize;
