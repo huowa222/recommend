@@ -13,11 +13,11 @@ public class Transform {
     private Transform() {}
 
     /**
-     * transform item and category information
+     * invert item and category information
      * @param categories
      * @return
      */
-    public static List<Category> transform(List<Category> categories, String featureToInvert) {
+    public static List<Category> invert(List<Category> categories, String featureToInvert) {
         Map<Item, Category> transformed = new HashMap<>();
         for(Category category : categories) {
             for(Item item : category.getItems().values()) {

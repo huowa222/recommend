@@ -11,6 +11,6 @@ public class TransformTest {
 
     @Test
     public void transform() {
-        System.out.println(Lambda.join(Transform.transform(SampleCorpus.buildMoviedCritics(), "RATING"), "\n"));
+        System.out.println(Lambda.join(Transform.invert(SampleCorpus.buildMoviedCritics(), "RATING"), "\n"));
     }
 }

@@ -15,7 +15,7 @@ public class SimilarMovieRecommenderTest {
 
     private static final PearsonsCoefficientFunction DISTANCE_FUNCTION = new PearsonsCoefficientFunction("RATING");
 
-    private static final List<Category> MOVIES_RATINGS = Transform.transform(SampleCorpus.buildMoviedCritics(), "RATING");
+    private static final List<Category> MOVIES_RATINGS = Transform.invert(SampleCorpus.buildMoviedCritics(), "RATING");
 
     private static final Category SUPERMAN_MOVIE = buildSuperManMovie();
 
