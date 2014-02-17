@@ -14,7 +14,7 @@ import java.util.TreeSet;
 /**
  * Created by kenny on 2/13/14.
  */
-public class Item implements Measurable<Item>, Iterable<Feature> {
+public class Item implements Comparable<Item>, Iterable<Feature> {
 
     private final String name;
 
@@ -105,9 +105,9 @@ public class Item implements Measurable<Item>, Iterable<Feature> {
 
     @Override
     public String toString() {
-        return "FeatureSet{" +
-                "name=" + name +
-                ", score=" + score +
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", score='" + score + '\'' +
                 ", features=" + Lambda.join(features) +
                 '}';
     }

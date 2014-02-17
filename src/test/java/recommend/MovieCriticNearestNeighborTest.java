@@ -13,40 +13,40 @@ import java.util.List;
 /**
  * Created by kenny on 2/16/14.
  */
-public class CategoryNearestNeighborTest {
+public class MovieCriticNearestNeighborTest {
 
-    private static final PearsonsCoefficientFunction FUNCTION = new PearsonsCoefficientFunction("RATING");
+    private static final PearsonsCoefficientFunction DISTANCE_FUNCTION = new PearsonsCoefficientFunction("RATING");
 
-    private static final Category KENNY = buildKenny();
+    private static final List<Category> MOVIE_CRITICS = SampleCorpus.buildMoviedCritics();
 
     private static final Category TOBY = buidToby();
 
-    @Test
-    public void recommendMovie() {
-         List<Category> critics = SampleCorpus.buildMoviedCritics();
+    private static final Category KENNY = buildKenny();
 
-         massScoreTest(KENNY, critics, new PearsonsCoefficientFunction("RATING"), 3) ;
-         massScoreTest(TOBY, critics, new PearsonsCoefficientFunction("RATING"), 3);
+    @Test
+    public void similarCritics() {
+         similarCritics(KENNY, DISTANCE_FUNCTION, 3);
+         similarCritics(TOBY, DISTANCE_FUNCTION, 3);
     }
 
-    private void massScoreTest(Category person, List<Category> people, DistanceFunction distanceFunction, int n) {
-        CategoryNearestNeighbor nearestNeighbor = new CategoryNearestNeighbor(people);
+    private void similarCritics(Category person, DistanceFunction distanceFunction, int n) {
+        CategoryNearestNeighbor nearestNeighbor = new CategoryNearestNeighbor(MOVIE_CRITICS);
         nearestNeighbor.setDistanceFunction(distanceFunction);
 
-        List<Category> sortedPeople = nearestNeighbor.search(person, n);
+        List<Category> sortedPeople = nearestNeighbor.topMatches(person, n);
         System.out.println("Top " + n + " for: " + person);
         System.out.println("Using: " + distanceFunction);
         System.out.println(Lambda.join(sortedPeople, "\n"));
-        System.out.println("\n");
+        System.out.println();
     }
 
     private static Category buidToby() {
-        Category toby = new Category("Toby");
-        toby.addItem(new Item("Snakes on a plane", new RatingFeature(4.5)));
-        toby.addItem(new Item("Superman Returns", new RatingFeature(4.0)));
-        toby.addItem(new Item("You, Me and Dupree", new RatingFeature(1.0)));
-
-        return toby;
+        for(Category category : MOVIE_CRITICS) {
+            if(category.getName().equals("Toby")) {
+                return category;
+            }
+        }
+        return null;
     }
 
     private static Category buildKenny() {

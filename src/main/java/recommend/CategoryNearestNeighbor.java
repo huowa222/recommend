@@ -1,5 +1,6 @@
 package recommend;
 
+import ch.lambdaj.Lambda;
 import recommend.distance.DistanceFunction;
 import recommend.feature.Category;
 
@@ -13,27 +14,25 @@ public class CategoryNearestNeighbor {
 
     private DistanceFunction distanceFunction;
 
-    private List<Category> entities;
+    private List<Category> categories;
 
-    public CategoryNearestNeighbor(List<Category> entities) {
-        this.entities = entities;
+    public CategoryNearestNeighbor(List<Category> categories) {
+        this.categories = categories;
     }
 
-    public List<Category> search(Category baseEntity) {
-        return search(baseEntity, 1);
-    }
+    public List<Category> topMatches(Category baseCategory, int n) {
+        Lambda.forEach(this.categories).setScore(1.0);
 
-    public List<Category> search(Category baseEntity, int n) {
-        for(Category entity : this.entities) {
-            if(baseEntity.equals(entity)) { continue; }
-            entity.setScore(this.distanceFunction.distance(baseEntity, entity));
+        for(Category category : this.categories) {
+            if(baseCategory.equals(category)) { continue; }
+            category.setScore(this.distanceFunction.distance(baseCategory, category));
         }
 
-        Collections.sort(this.entities);
-        if(n > this.entities.size()) {
-            n = this.entities.size();
+        Collections.sort(this.categories);
+        if(n > this.categories.size()) {
+            n = this.categories.size();
         }
-        return this.entities.subList(0, n);
+        return this.categories.subList(0, n);
     }
 
     public void setDistanceFunction(DistanceFunction distanceFunction) {

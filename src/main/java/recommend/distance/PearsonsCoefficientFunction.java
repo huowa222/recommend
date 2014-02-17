@@ -11,6 +11,9 @@ import java.util.Set;
  */
 public class PearsonsCoefficientFunction implements DistanceFunction {
 
+    /**
+     * Only allow pearson's coefficient on one feature/item
+     */
     private String feature;
 
     public PearsonsCoefficientFunction(String feature) {
@@ -46,17 +49,15 @@ public class PearsonsCoefficientFunction implements DistanceFunction {
             // sum up products
             pSum += category1.getItem(item).getFeature(feature).getValue() * category2.getItem(item).getFeature(feature).getValue();
         }
-        //System.out.println(sum1 + " " + sum2 + " " + sum1Sq + " " + sum2Sq + " " + pSum);
 
         // calculate Pearson's score
         double num = pSum - (sum1 * sum2 / (double)intersection.size());
-        //System.out.println("num: " + num);
         double den = Math.sqrt(
                 (sum1Sq - Math.pow(sum1, 2) / intersection.size()) *
                         (sum2Sq - Math.pow(sum2, 2) / intersection.size()));
-        //System.out.println("den: " + den);
         if(den == 0) { return 0; }
-        return 1 - Normalize.linear(num / den, -1, 1);
+        //return num / den;
+        return 1 - Normalize.linear(num / den, -1, 1); // return similary coefficient as distance metric
     }
 
     @Override

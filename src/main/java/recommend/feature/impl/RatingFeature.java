@@ -23,7 +23,7 @@ public class RatingFeature extends Feature {
     @Override
     public String toString() {
         return "RatingFeature{" +
-                "value=" + getOriginalValue() + " / " + MAX_VALUE +
+                "value='" + getOriginalValue() + " / " + MAX_VALUE + '\'' +
                 '}';
     }
 

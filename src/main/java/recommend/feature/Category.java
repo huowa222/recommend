@@ -10,7 +10,7 @@ import java.util.TreeSet;
 /**
  * Created by kenny on 2/16/14.
  */
-public class Category implements Measurable<Category> {
+public class Category implements Comparable<Category> {
 
     private final String name;
 
@@ -54,6 +54,10 @@ public class Category implements Measurable<Category> {
         return items.keySet();
     }
 
+    public Map<String, Item> getItems() {
+        return items;
+    }
+
     public Set<String> intersection(Category category) {
         Set<String> intersection = new TreeSet<>(getItemNames());
         intersection.retainAll(category.getItemNames());
@@ -88,7 +92,8 @@ public class Category implements Measurable<Category> {
     public String toString() {
         return "Category{" +
                 "name='" + name + '\'' +
-                ", featureVectors=" + Lambda.join(items, "\n") +
+                ", score='" + score + '\'' +
+                ", items=" + Lambda.join(items, "\n\t") +
                 '}';
     }
 
