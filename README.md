@@ -33,19 +33,19 @@ A user and his movie ratings
 ```
 Category{name='Toby', score='0.0', items=
   Item{name='Snakes on a plane', score='0.0', features=RatingFeature{value='4.5 / 5.0'}}
-	Item{name='Superman Returns', score='0.0', features=RatingFeature{value='4.0 / 5.0'}}
-	Item{name='You, Me and Dupree', score='0.0', features=RatingFeature{value='1.0 / 5.0'}}}
+  Item{name='Superman Returns', score='0.0', features=RatingFeature{value='4.0 / 5.0'}}
+  Item{name='You, Me and Dupree', score='0.0', features=RatingFeature{value='1.0 / 5.0'}}}
 ```
 
 One Category resulting from a transformation of Category centric data to an Item Centric data set
 ```
 Category{name='You, Me and Dupree', score='0.17102415252011527', items=
   Item{name='Claudia Puig', score='0.0', features=GeneralFeature{name='RATING', value='2.5}}
-	Item{name='Jack Matthews', score='0.0', features=GeneralFeature{name='RATING', value='3.5}}
-	Item{name='Toby', score='0.0', features=GeneralFeature{name='RATING', value='1.0}}
-	Item{name='Gene Seymour', score='0.0', features=GeneralFeature{name='RATING', value='3.5}}
-	Item{name='Lisa Rose', score='0.0', features=GeneralFeature{name='RATING', value='2.5}}
-	Item{name='Mick LaSalle', score='0.0', features=GeneralFeature{name='RATING', value='2.0}}}
+  Item{name='Jack Matthews', score='0.0', features=GeneralFeature{name='RATING', value='3.5}}
+  Item{name='Toby', score='0.0', features=GeneralFeature{name='RATING', value='1.0}}
+  Item{name='Gene Seymour', score='0.0', features=GeneralFeature{name='RATING', value='3.5}}
+  Item{name='Lisa Rose', score='0.0', features=GeneralFeature{name='RATING', value='2.5}}
+  Item{name='Mick LaSalle', score='0.0', features=GeneralFeature{name='RATING', value='2.0}}}
 ```	
 	
 	
