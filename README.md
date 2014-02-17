@@ -35,7 +35,7 @@ Category{name='Toby', score='0.0', items=
 	Item{name='You, Me and Dupree', score='0.0', features=RatingFeature{value='1.0 / 5.0'}}}
 ```
 
-One Category resulting from a transformation of Categories and Items 
+One Category resulting from a transformation of Category centric data to an Item Centric data set
 ```
 Category{name='You, Me and Dupree', score='0.17102415252011527', items=
   Item{name='Claudia Puig', score='0.0', features=GeneralFeature{name='RATING', value='2.5}}
