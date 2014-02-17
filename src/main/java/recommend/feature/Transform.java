@@ -38,27 +38,4 @@ public class Transform {
         return new LinkedList(transformed.values());
     }
 
-//    public static List<Category> transform(List<Category> categories, String featureToInvert) {
-//        Map<Item, Category> transformed = new HashMap<>();
-//        for(Category category : categories) {
-//            for(Item item : category.getItems().values()) {
-//                if(!transformed.containsKey(item)) {
-//                    Category newCategory = new Category(item.getName());
-//                    newCategory.addItem(new Item(item.getName()));
-//                    transformed.put(item, newCategory);
-//                }
-//                GeneralFeature feature = new GeneralFeature(
-//                        category.getName(),
-//                        item.getFeature(featureToInvert).getValue()
-//                );
-//                Item newItem = new Item(category.getName());
-//                newItem
-//
-//                transformed.get(item).getItems().get(item.getName()).addFeature(feature);
-//            }
-//        }
-//
-//        return new LinkedList(transformed.values());
-//    }
-
 }

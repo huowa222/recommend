@@ -31,7 +31,6 @@ public class SimilarMovieRecommenderTest {
 
     }
 
-
     private static Category buildSuperManMovie() {
         for(Category category : MOVIES_RATINGS) {
             if(category.getName().equals("Superman Returns")) {
