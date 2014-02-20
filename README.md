@@ -21,6 +21,8 @@ Algorithms from the book [Collective Intelligence](http://shop.oreilly.com/produ
 - Category based recommendation
 - Transform Category <--> Item data
 - Normalization methods (linear, log, poisson)
+- Hiearchical Clustering
+
 
 **Data Representation Examples**
 
@@ -47,5 +49,25 @@ Category{name='You, Me and Dupree', score='0.17102415252011527', items=
   Item{name='Lisa Rose', score='0.0', features=GeneralFeature{name='RATING', value='2.5}}
   Item{name='Mick LaSalle', score='0.0', features=GeneralFeature{name='RATING', value='2.0}}}
 ```	
-	
+
+
+Hiearchical Clustering Example
+```
+Colors to be clustered
+Item{name='orange', score='0.0', features=GeneralFeature{name='G', value='200.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='255.0}}
+Item{name='cyan', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='0.0}}
+Item{name='magenta', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='255.0}}
+Item{name='red', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='255.0}}
+Item{name='blue', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='0.0}}
+Item{name='green', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='0.0}}
+Item{name='darkGray', score='0.0', features=GeneralFeature{name='G', value='64.0}, GeneralFeature{name='B', value='64.0}, GeneralFeature{name='R', value='64.0}}
+Item{name='white', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='255.0}}
+Item{name='lightGray', score='0.0', features=GeneralFeature{name='G', value='192.0}, GeneralFeature{name='B', value='192.0}, GeneralFeature{name='R', value='192.0}}
+Item{name='pink', score='0.0', features=GeneralFeature{name='G', value='175.0}, GeneralFeature{name='B', value='175.0}, GeneralFeature{name='R', value='255.0}}
+Item{name='yellow', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='255.0}}
+Item{name='gray', score='0.0', features=GeneralFeature{name='G', value='128.0}, GeneralFeature{name='B', value='128.0}, GeneralFeature{name='R', value='128.0}}
+Item{name='black', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='0.0}}
+Clustered colors
+{{{{{{{{{{{{black,darkGray},gray},lightGray},pink},white},orange},yellow},red},magenta},blue},cyan},green}
+```
 	

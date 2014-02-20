@@ -1,17 +1,23 @@
 package recommend;
 
 import recommend.feature.Category;
+import recommend.feature.GeneralFeature;
 import recommend.feature.Item;
 import recommend.feature.impl.RatingFeature;
 
+import java.awt.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by kenny on 2/16/14.
  */
 public class SampleCorpus {
-
 
     public static List<Category> buildMoviedCritics() {
         List<Category> categories = new LinkedList<>();
@@ -72,6 +78,34 @@ public class SampleCorpus {
         categories.add(toby);
 
         return categories;
+    }
+
+    public static List<Item> buildColors() {
+        try {
+            Map<String, Color> singleColors = new HashMap<>();
+            for (Field cf : Color.class.getDeclaredFields()) {
+                int modifiers = cf.getModifiers();
+                if (!Modifier.isPublic(modifiers)) continue;
+
+                Color c = (Color)cf.get(null);
+                if (!singleColors.values().contains(c))
+                    singleColors.put(cf.getName(), c);
+            }
+            List<Item> items = new LinkedList<>();
+            for (String k : singleColors.keySet()) {
+                Item item = new Item(k);
+                item.addFeature(new GeneralFeature("R", singleColors.get(k).getRed()));
+                item.addFeature(new GeneralFeature("G", singleColors.get(k).getGreen()));
+                item.addFeature(new GeneralFeature("B", singleColors.get(k).getBlue()));
+
+                items.add(item);
+            }
+            return items;
+        } catch(IllegalAccessException e) {
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+        }
+        return Collections.emptyList();
     }
 
 }
