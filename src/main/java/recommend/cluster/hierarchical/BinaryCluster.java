@@ -3,6 +3,10 @@ package recommend.cluster.hierarchical;
 import recommend.feature.Item;
 import recommend.math.Stats;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by kenny on 2/20/14.
  */
@@ -23,6 +27,11 @@ public class BinaryCluster implements Cluster {
 
     public Item getItem() {
         return averagedItem;
+    }
+
+    @Override
+    public Set<Cluster> getParents() {
+        return new HashSet<>(Arrays.asList(cluster1, cluster2));
     }
 
     @Override
