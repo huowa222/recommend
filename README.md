@@ -22,7 +22,7 @@ Algorithms from the book [Collective Intelligence](http://shop.oreilly.com/produ
 - Transform Category <--> Item data
 - Normalization methods (linear, log, poisson)
 - Hiearchical Clustering
-- K-Means (K=2) Clustering
+- K-Means Clustering
 
 
 **Data Representation Examples**
