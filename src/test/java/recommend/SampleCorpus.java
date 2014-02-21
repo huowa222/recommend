@@ -8,6 +8,7 @@ import recommend.feature.impl.RatingFeature;
 import java.awt.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -106,6 +107,40 @@ public class SampleCorpus {
             e.printStackTrace();
         }
         return Collections.emptyList();
+    }
+
+    // http://mnemstudio.org/clustering-k-means-example-1.htm
+    public static List<Item> kMeansData() {
+        return new LinkedList<>(Arrays.asList(
+                new Item("1", Arrays.asList(
+                    new GeneralFeature("A", 1.0),
+                    new GeneralFeature("B", 1.0)
+                )),
+                new Item("2", Arrays.asList(
+                        new GeneralFeature("A", 1.5),
+                        new GeneralFeature("B", 2.0)
+                )),
+                new Item("3", Arrays.asList(
+                        new GeneralFeature("A", 3.0),
+                        new GeneralFeature("B", 4.0)
+                )),
+                new Item("4", Arrays.asList(
+                        new GeneralFeature("A", 5.0),
+                        new GeneralFeature("B", 7.0)
+                )),
+                new Item("5", Arrays.asList(
+                        new GeneralFeature("A", 3.5),
+                        new GeneralFeature("B", 5.0)
+                )),
+                new Item("6", Arrays.asList(
+                        new GeneralFeature("A", 4.5),
+                        new GeneralFeature("B", 5.0)
+                )),
+                new Item("7", Arrays.asList(
+                        new GeneralFeature("A", 3.5),
+                        new GeneralFeature("B", 4.5)
+                ))
+        ));
     }
 
 }

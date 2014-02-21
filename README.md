@@ -22,6 +22,7 @@ Algorithms from the book [Collective Intelligence](http://shop.oreilly.com/produ
 - Transform Category <--> Item data
 - Normalization methods (linear, log, poisson)
 - Hiearchical Clustering
+- K-Means (K=2) Clustering
 
 
 **Data Representation Examples**
@@ -71,3 +72,25 @@ Clustered colors
 {{{{{{{{{{{{black,darkGray},gray},lightGray},pink},white},orange},yellow},red},magenta},blue},cyan},green}
 ```
 	
+K-Means Clustering Example (K=2)
+```
+Iterations = 1
+{1, Item{name='3', score='0.0', features=GeneralFeature{name='A', value='3.0}, GeneralFeature{name='B', value='4.0}}, Item{name='2', score='0.0', features=GeneralFeature{name='A', value='1.5}, GeneralFeature{name='B', value='2.0}} }
+{4, Item{name='7', score='0.0', features=GeneralFeature{name='A', value='3.5}, GeneralFeature{name='B', value='4.5}}, Item{name='6', score='0.0', features=GeneralFeature{name='A', value='4.5}, GeneralFeature{name='B', value='5.0}}, Item{name='5', score='0.0', features=GeneralFeature{name='A', value='3.5}, GeneralFeature{name='B', value='5.0}} }
+New centers:
+Item{name='{1, 3, 2}', score='0.0', features=GeneralFeature{name='A', value='1.8333333333333333}, GeneralFeature{name='B', value='2.3333333333333335}}
+Item{name='{4, 7, 6, 5}', score='0.0', features=GeneralFeature{name='A', value='4.125}, GeneralFeature{name='B', value='5.375}}
+Sizes:
+3
+4
+
+Iterations = 3
+{1, Item{name='2', score='0.0', features=GeneralFeature{name='A', value='1.5}, GeneralFeature{name='B', value='2.0}} }
+{4, Item{name='3', score='0.0', features=GeneralFeature{name='A', value='3.0}, GeneralFeature{name='B', value='4.0}}, Item{name='7', score='0.0', features=GeneralFeature{name='A', value='3.5}, GeneralFeature{name='B', value='4.5}}, Item{name='6', score='0.0', features=GeneralFeature{name='A', value='4.5}, GeneralFeature{name='B', value='5.0}}, Item{name='5', score='0.0', features=GeneralFeature{name='A', value='3.5}, GeneralFeature{name='B', value='5.0}} }
+New centers:
+Item{name='{1, 2}', score='0.0', features=GeneralFeature{name='A', value='1.25}, GeneralFeature{name='B', value='1.5}}
+Item{name='{4, 3, 7, 6, 5}', score='0.0', features=GeneralFeature{name='A', value='3.9}, GeneralFeature{name='B', value='5.1}}
+Sizes:
+2
+5
+```

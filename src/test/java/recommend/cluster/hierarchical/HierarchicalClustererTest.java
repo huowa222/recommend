@@ -9,18 +9,18 @@ import java.util.Collection;
 /**
  * Created by kenny on 2/20/14.
  */
-public class HierarchicalClusterTest {
+public class HierarchicalClustererTest {
 
     @Test
     public void cluster() {
-        HierarchicalCluster hierarchicalCluster = new HierarchicalCluster();
+        HierarchicalClusterer hierarchicalClusterer = new HierarchicalClusterer();
         System.out.println("Colors to be clustered");
         for(Item item : SampleCorpus.buildColors()) {
             System.out.println(item);
         }
 
         System.out.println("Clustered colors");
-        Cluster hCluster = hierarchicalCluster.cluster(SampleCorpus.buildColors());
+        Cluster hCluster = hierarchicalClusterer.cluster(SampleCorpus.buildColors());
         System.out.println(hCluster);
 
         System.out.println("Traverse Parents...");

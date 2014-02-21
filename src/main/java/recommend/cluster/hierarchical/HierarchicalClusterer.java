@@ -11,11 +11,11 @@ import java.util.List;
 /**
  * Created by kenny on 2/20/14.
  */
-public class HierarchicalCluster {
+public class HierarchicalClusterer {
 
     private DistanceFunction distanceFunction;
 
-    public HierarchicalCluster() {
+    public HierarchicalClusterer() {
         distanceFunction = new EuclideanDistanceFunction();
     }
 
