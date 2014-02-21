@@ -11,11 +11,11 @@ import static ch.lambdaj.Lambda.on;
 /**
  * Created by kenny on 2/21/14.
  */
-public class K2MeansTest {
+public class K2MeansClustererTest {
 
     @Test
     public void clusterSampleData() {
-        K2MeansClusterer clusterer = new K2MeansClusterer();
+        KMeansClusterer clusterer = new K2MeansClusterer();
         clusterer.setMaxIterations(1);
 
         System.out.println("Iterations = 1");
@@ -50,7 +50,7 @@ public class K2MeansTest {
 
     @Test
     public void clusterColors() {
-        K2MeansClusterer clusterer = new K2MeansClusterer();
+        KMeansClusterer clusterer = new K2MeansClusterer();
         clusterer.setMaxIterations(1);
 
         System.out.println("Iterations = 1");
