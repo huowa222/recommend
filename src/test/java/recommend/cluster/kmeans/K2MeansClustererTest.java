@@ -23,8 +23,6 @@ public class K2MeansClustererTest {
         System.out.println(Lambda.join(clusters, "\n"));
         System.out.println("New centers:");
         System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).center()), "\n"));
-        System.out.println("Sizes:");
-        System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).size()), "\n"));
 
 
         clusterer.setMaxIterations(3);
@@ -33,8 +31,6 @@ public class K2MeansClustererTest {
         System.out.println(Lambda.join(clusters, "\n"));
         System.out.println("New centers:");
         System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).center()), "\n"));
-        System.out.println("Sizes:");
-        System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).size()), "\n"));
 
 
         clusterer.setMaxIterations(10);
@@ -43,8 +39,6 @@ public class K2MeansClustererTest {
         System.out.println(Lambda.join(clusters, "\n"));
         System.out.println("New centers:");
         System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).center()), "\n"));
-        System.out.println("Sizes:");
-        System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).size()), "\n"));
     }
 
 
@@ -58,8 +52,6 @@ public class K2MeansClustererTest {
         System.out.println(Lambda.join(clusters, "\n"));
         System.out.println("New centers:");
         System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).center()), "\n"));
-        System.out.println("Sizes:");
-        System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).size()), "\n"));
 
 
         clusterer.setMaxIterations(3);
@@ -68,8 +60,6 @@ public class K2MeansClustererTest {
         System.out.println(Lambda.join(clusters, "\n"));
         System.out.println("New centers:");
         System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).center()), "\n"));
-        System.out.println("Sizes:");
-        System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).size()), "\n"));
 
 
         clusterer.setMaxIterations(10);
@@ -78,8 +68,6 @@ public class K2MeansClustererTest {
         System.out.println(Lambda.join(clusters, "\n"));
         System.out.println("New centers:");
         System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).center()), "\n"));
-        System.out.println("Sizes:");
-        System.out.println(Lambda.join(Lambda.extract(clusters, on(Centroid.class).size()), "\n"));
     }
 
 }

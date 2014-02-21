@@ -80,9 +80,7 @@ Iterations = 1
 New centers:
 Item{name='{1, 3, 2}', score='0.0', features=GeneralFeature{name='A', value='1.8333333333333333}, GeneralFeature{name='B', value='2.3333333333333335}}
 Item{name='{4, 7, 6, 5}', score='0.0', features=GeneralFeature{name='A', value='4.125}, GeneralFeature{name='B', value='5.375}}
-Sizes:
-3
-4
+
 
 Iterations = 3
 {1, Item{name='2', score='0.0', features=GeneralFeature{name='A', value='1.5}, GeneralFeature{name='B', value='2.0}} }
@@ -90,7 +88,22 @@ Iterations = 3
 New centers:
 Item{name='{1, 2}', score='0.0', features=GeneralFeature{name='A', value='1.25}, GeneralFeature{name='B', value='1.5}}
 Item{name='{4, 3, 7, 6, 5}', score='0.0', features=GeneralFeature{name='A', value='3.9}, GeneralFeature{name='B', value='5.1}}
-Sizes:
-2
-5
+```
+K-Means Clustering Example (K=3)
+```
+Iterations = 3
+{cyan, Item{name='blue', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='0.0}}, Item{name='white', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='255.0}}, Item{name='lightGray', score='0.0', features=GeneralFeature{name='G', value='192.0}, GeneralFeature{name='B', value='192.0}, GeneralFeature{name='R', value='192.0}}, Item{name='pink', score='0.0', features=GeneralFeature{name='G', value='175.0}, GeneralFeature{name='B', value='175.0}, GeneralFeature{name='R', value='255.0}}, Item{name='gray', score='0.0', features=GeneralFeature{name='G', value='128.0}, GeneralFeature{name='B', value='128.0}, GeneralFeature{name='R', value='128.0}} }
+{red, Item{name='magenta', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='255.0}, GeneralFeature{name='R', value='255.0}} }
+{orange, Item{name='green', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='0.0}}, Item{name='darkGray', score='0.0', features=GeneralFeature{name='G', value='64.0}, GeneralFeature{name='B', value='64.0}, GeneralFeature{name='R', value='64.0}}, Item{name='yellow', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='255.0}}, Item{name='black', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='0.0}} }
+New centers:
+Item{name='{cyan, blue, white, lightGray, pink, gray}', score='0.0', features=GeneralFeature{name='G', value='167.5}, GeneralFeature{name='B', value='210.0}, GeneralFeature{name='R', value='138.33333333333334}}
+Item{name='{red, magenta}', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='127.5}, GeneralFeature{name='R', value='255.0}}
+Item{name='{orange, green, darkGray, yellow, black}', score='0.0', features=GeneralFeature{name='G', value='154.8}, GeneralFeature{name='B', value='12.8}, GeneralFeature{name='R', value='114.8}}
+
+
+Iterations = 10
+{pink, Item{name='orange', score='0.0', features=GeneralFeature{name='G', value='200.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='255.0}}, Item{name='red', score='0.0', features=GeneralFeature{name='G', value='0.0}, GeneralFeature{name='B', value='0.0}, GeneralFeature{name='R', value='255.0}}, Item{name='magenta', score='0.0', features=GeneralFeature{name='G', valuNew centers:
+Item{name='{pink, orange, red, magenta, white, lightGray, yellow, gray}', score='0.0', features=GeneralFeature{name='G', value='150.625}, GeneralFeature{name='B', value='125.625}, GeneralFeature{name='R', value='231.25}}
+Item{name='{green, cyan}', score='0.0', features=GeneralFeature{name='G', value='255.0}, GeneralFeature{name='B', value='127.5}, GeneralFeature{name='R', value='0.0}}
+Item{name='{blue, darkGray, black}', score='0.0', features=GeneralFeature{name='G', value='21.333333333333332}, GeneralFeature{name='B', value='106.33333333333333}, GeneralFeature{name='R', value='21.333333333333332}}
 ```
